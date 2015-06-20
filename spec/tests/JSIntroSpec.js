@@ -1,70 +1,85 @@
 
 describe("JSIntro Test Suite", function(){
-	var JSIntro = require("../../src/JSIntro");
+    var JSIntro = require("../../src/JSIntro");
 
-	describe("JSIntro-Sum", function(){
+    describe("JSIntro-Sum", function(){
 
-		it("sum of 2 and 3 is 5", function(){
+        it("sum of 2 and 3 is 5", function(){
 
-			var i = JSIntro.Sum(2,3);
-			expect(i).toEqual(5);
-		});
+            var i = JSIntro.Sum(2,3);
+            expect(i).toEqual(5);
+        });
 
-		it("sum of -1 and 3 is 2", function(){
+        it("sum of -1 and 3 is 2", function(){
 
-			var i = JSIntro.Sum(-1,3);
-			expect(i).toEqual(2);
-		});
+            var i = JSIntro.Sum(-1,3);
+            expect(i).toEqual(2);
+        });
 
-	});
+    });
 
-	describe("JSIntro-SumOfArray", function(){
+    describe("JSIntro-SumOfArray", function(){
 
-		it("sum of 2 and 3 is 5", function(){
+        it("sum of 2 and 3 is 5", function(){
 
-			var i = JSIntro.SumOfArray([2,3]);
-			expect(i).toEqual(5);
-		});
+            var i = JSIntro.SumOfArray([2,3]);
+            expect(i).toEqual(5);
+        });
 
-	});
+    });
 
-	describe("JSIntro-SumOfUniqueNumbers", function(){
+    describe("JSIntro-SumOfUniqueNumbers", function(){
 
-		it("sum of 2,3,3,2 is 5", function(){
+        it("sum of 2,3,3,2 is 5", function(){
 
-			var i = JSIntro.SumOfUniqueNumbers([2,3,3,2]);
-			expect(i).toEqual(5);
-		});
+            var i = JSIntro.SumOfUniqueNumbers([2,3,3,2]);
+            expect(i).toEqual(5);
+        });
 
-		it("sum of 2,3,4 is 9", function(){
+        it("sum of 2,3,4 is 9", function(){
 
-			var i = JSIntro.SumOfUniqueNumbers([2,3,4]);
-			expect(i).toEqual(9);
-		});
-		it("sum of 1,2,3,4,3,3 is 10", function(){
+            var i = JSIntro.SumOfUniqueNumbers([2,3,4]);
+            expect(i).toEqual(9);
+        });
+        it("sum of 1,2,3,4,3,3 is 10", function(){
 
-			var i = JSIntro.SumOfUniqueNumbers([1,2,3,4,3,3]);
-			expect(i).toEqual(10);
-		});
-	});
-	describe("JSIntro-ReverseString", function(){
+            var i = JSIntro.SumOfUniqueNumbers([1,2,3,4,3,3]);
+            expect(i).toEqual(10);
+        });
+    });
+    describe("JSIntro-ReverseString", function(){
 
-		it("abc reversed is cba", function(){
+        it("abc reversed is cba", function(){
 
-			var str = JSIntro.ReverseString("abc");
-			expect(str).toEqual("cba");
-		});
+            var str = JSIntro.ReverseString("abc");
+            expect(str).toEqual("cba");
+        });
 
-		it("abcd reversed is dcba", function(){
+        it("abcd reversed is dcba", function(){
 
-			var str = JSIntro.ReverseString("abcd");
-			expect(str).toEqual("dcba");
-		});
+            var str = JSIntro.ReverseString("abcd");
+            expect(str).toEqual("dcba");
+        });
 
-		it("a reversed is a", function(){
+        it("a reversed is a", function(){
 
-			var str = JSIntro.ReverseString("a");
-			expect(str).toEqual("a");
-		});
-	});
+            var str = JSIntro.ReverseString("a");
+            expect(str).toEqual("a");
+        });
+    });
+    describe("JSIntro-Reverse Array of Strings", function () {
+        it("[abc,bac] reverse is [bac,abc]", function () {
+            var string_array = JSIntro.ReverseArrayOfStrings(["abc", "bac"]);
+            expect(string_array).toEqual(["bac", "abc"]);
+        });
+
+        it("[apple,mango] reverse is [mango,apple]", function () {
+            var string_array = JSIntro.ReverseArrayOfStrings(["apple", "mango"]);
+            expect(string_array).toEqual(["mango", "apple"]);
+        });
+        it("[hi,how,you] reverse is [you,how,hi]", function () {
+            var string_array = JSIntro.ReverseArrayOfStrings(["hi","how","you"]);
+            expect(string_array).toEqual(["you","how","hi"]);
+        });
+    });
 });
