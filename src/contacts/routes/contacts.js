@@ -15,12 +15,12 @@ router.get('/:id', function (req, res, next) {
 router.post('/', function (req, res, next) {
     count++;
     array.push(req.body);
-    res.json(count-1);
+    
     console.log(req.body);
     //json.stringify(req.body)
     fs.writeFile("../../data/" + (count - 1) + "-Contact.json", JSON.stringify(array[count-1]));
     console.log("file created");
-    
+    res.json(count-1);
    
 });
 
@@ -44,9 +44,10 @@ router.post('/:id/:message', function (req, res, next) {
     console.log(req.body);
     console.log("done");
     console.log(message_count);
-    res.json(message_count - 1);
+    
     array[parseInt(req.params.id)].message = req.body;
     fs.writeFile("../../data/" + parseInt(req.params.id) + "-Contact.json", JSON.stringify(array[parseInt(req.params.id)]));
+	res.json(message_count - 1);
 });
 router.get('/ask/:message_id', function (req, res, next) {
     //console.log(req);

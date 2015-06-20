@@ -2,7 +2,7 @@
 var getContactFileName = function(id) {
 
 	// We assume contacts are stored under data sub-folder
-	return "../../data/" + id + "-Contact.json";
+	return "data//" + id + "-Contact.json";
 }
 
 describe("FilePersistence Test Suite", function(){
